@@ -1,7 +1,12 @@
-/** @format */
+// Import a library to help create a component(like a view or content)
+import React from 'react';
+import { Text, AppRegistry } from 'react-native';
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+// Create a component
+const App = ()=> {
+    return (<Text>Hello World
+        </Text>);
+};
 
-AppRegistry.registerComponent(appName, () => App);
+// Render it to the device
+ReactNative.AppRegistry.registerComponent('DOORDASHREACTDEMO', () => App)
