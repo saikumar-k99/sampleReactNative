@@ -2,19 +2,25 @@
 
 // import needed libraries 
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 // create the component
 const Header = () => {
-    const { textStyle } = styles;
+    const { textStyle, viewStyle } = styles;
 
-    return <Text style={textStyle}>Restaurants</Text>;
+    return (<View style={viewStyle}> 
+     <Text style={textStyle}>Restaurants</Text>
+     </View>);
  };
 
 const styles = {
     textStyle: {
         //Styles use camel case instead of - notation as in CSS
         fontSize: 80
+    },
+    viewStyle: {
+        //Styles for the view which is a superview for the Header text
+        backgroundColor: '#FF0000'
     }
 };
 
