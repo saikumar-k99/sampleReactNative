@@ -7,7 +7,7 @@ import Header from './src/Components/Header';
 
 // Create a component
 // returns the JSX in the below funciton
-const App = () => (<Header />);
+const App = () => (<Header headerText={'Restaurants'}/>);
 
 // Render it to the device
 AppRegistry.registerComponent('DoorDashReactDemo', () => App);
