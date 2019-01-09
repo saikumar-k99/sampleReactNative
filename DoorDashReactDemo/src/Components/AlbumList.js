@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
+import axios from 'axios';
 
 class AlbumsList extends Component {
 
-    componentWilMount() {
-        console.log('componentWilMount is called now');
+    // life cycle method for classes extending Component
+    componentDidMount() {
+        console.log('component did mount is called');
+        axios.get('https://rallycoding.herokuapp.com/api/music_albums/').then(response => console.log(response));
     }
 
     render() {
