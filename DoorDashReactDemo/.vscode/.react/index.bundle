@@ -86198,7 +86198,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _possibleConstructorReturn2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "@babel/runtime/helpers/possibleConstructorReturn"));
 
-  var _getPrototypeOf2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
+  var _getPrototypeOf3 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[5], "@babel/runtime/helpers/getPrototypeOf"));
 
   var _inherits2 = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[6], "@babel/runtime/helpers/inherits"));
 
@@ -86209,6 +86209,8 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   var _reactNative = _$$_REQUIRE(_dependencyMap[9], "react-native");
 
   var _axios = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[10], "axios"));
+
+  var _AlbumDetail = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[11], "./AlbumDetail"));
 
   var _jsxFileName = "/Users/Saikumar/Developer/github:Saikumar-k99/sampleReactNative/DoorDashReactDemo/src/Components/AlbumList.js";
   var _components = {
@@ -86234,33 +86236,60 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     (0, _inherits2.default)(AlbumsList, _Component);
 
     function AlbumsList() {
+      var _getPrototypeOf2;
+
+      var _this;
+
       (0, _classCallCheck2.default)(this, AlbumsList);
-      return (0, _possibleConstructorReturn2.default)(this, (0, _getPrototypeOf2.default)(AlbumsList).apply(this, arguments));
+
+      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      _this = (0, _possibleConstructorReturn2.default)(this, (_getPrototypeOf2 = (0, _getPrototypeOf3.default)(AlbumsList)).call.apply(_getPrototypeOf2, [this].concat(args)));
+      _this.state = {
+        albums: []
+      };
+      return _this;
     }
 
     (0, _createClass2.default)(AlbumsList, [{
       key: "componentDidMount",
       value: function componentDidMount() {
+        var _this2 = this;
+
         console.log('component did mount is called');
 
         _axios.default.get('https://rallycoding.herokuapp.com/api/music_albums/').then(function (response) {
-          return console.log(response);
+          return _this2.setState({
+            albums: response.data
+          });
+        });
+      }
+    }, {
+      key: "renderAlbums",
+      value: function renderAlbums() {
+        return this.state.albums.map(function (album) {
+          return _react.default.createElement(_AlbumDetail.default, {
+            key: album.title,
+            propAlbum: album,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 16
+            }
+          });
         });
       }
     }, {
       key: "render",
       value: function render() {
+        console.log(this.state);
         return _react.default.createElement(_reactNative.View, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14
+            lineNumber: 21
           }
-        }, _react.default.createElement(_reactNative.Text, {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 15
-          }
-        }, "Album list!! "));
+        }, this.renderAlbums());
       }
     }]);
     return AlbumsList;
@@ -86269,7 +86298,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   AlbumsList = _wrapComponent("AlbumsList")(AlbumsList);
   var _default2 = AlbumsList;
   exports.default = _default2;
-},544,[1,545,25,26,41,44,47,2,183,9,546],"src/Components/AlbumList.js");
+},544,[1,545,25,26,41,44,47,2,183,9,546,572],"src/Components/AlbumList.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   function _interopRequireWildcard(obj) {
     if (obj && obj.__esModule) {
@@ -87275,6 +87304,85 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     };
   };
 },571,[],"node_modules/axios/lib/helpers/spread.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _Card = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./Card"));
+
+  var _jsxFileName = "/Users/Saikumar/Developer/github:Saikumar-k99/sampleReactNative/DoorDashReactDemo/src/Components/AlbumDetail.js";
+
+  var AlbumDetail = function AlbumDetail(props) {
+    return _react.default.createElement(_Card.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      }
+    }, _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      }
+    }, props.propAlbum.title));
+  };
+
+  var _default = AlbumDetail;
+  exports.default = _default;
+},572,[1,2,9,573],"src/Components/AlbumDetail.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _jsxFileName = "/Users/Saikumar/Developer/github:Saikumar-k99/sampleReactNative/DoorDashReactDemo/src/Components/Card.js";
+
+  var Card = function Card(props) {
+    return _react.default.createElement(_reactNative.View, {
+      style: styles.containerStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 5
+      }
+    }, props.children);
+  };
+
+  var styles = {
+    containerStyle: {
+      borderWidth: 1,
+      borderRadius: 2,
+      borderColor: '#ddd',
+      borderBottomWidth: 0,
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 2
+      },
+      shadowOpacity: 0.1,
+      shadowRadius: 2,
+      elevation: 1,
+      marginLeft: 5,
+      marginRight: 5,
+      marginTop: 10
+    }
+  };
+  var _default = Card;
+  exports.default = _default;
+},573,[1,2,9],"src/Components/Card.js");
 __r(90);
 __r(0);
 //# sourceMappingURL=index.map
