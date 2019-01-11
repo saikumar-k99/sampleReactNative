@@ -1,9 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
+import CardSection from './CardSection';
 
-const Card = (props) => (
+const Card = (dependency) => (
         <View style={styles.containerStyle}>
-        {props.children}
+        {dependency.children}
         </View>
     );
 

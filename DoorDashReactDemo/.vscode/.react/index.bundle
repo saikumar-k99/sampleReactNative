@@ -87318,25 +87318,32 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _Card = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./Card"));
 
+  var _CardSection = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[4], "./CardSection"));
+
   var _jsxFileName = "/Users/Saikumar/Developer/github:Saikumar-k99/sampleReactNative/DoorDashReactDemo/src/Components/AlbumDetail.js";
 
   var AlbumDetail = function AlbumDetail(props) {
     return _react.default.createElement(_Card.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 7
+        lineNumber: 8
+      }
+    }, _react.default.createElement(_CardSection.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
       }
     }, _react.default.createElement(_reactNative.Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 8
+        lineNumber: 10
       }
-    }, props.propAlbum.title));
+    }, props.propAlbum.title)));
   };
 
   var _default = AlbumDetail;
   exports.default = _default;
-},572,[1,2,9,573],"src/Components/AlbumDetail.js");
+},572,[1,2,9,573,574],"src/Components/AlbumDetail.js");
 __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
   var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
 
@@ -87349,16 +87356,18 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
 
+  var _CardSection = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[3], "./CardSection"));
+
   var _jsxFileName = "/Users/Saikumar/Developer/github:Saikumar-k99/sampleReactNative/DoorDashReactDemo/src/Components/Card.js";
 
-  var Card = function Card(props) {
+  var Card = function Card(dependency) {
     return _react.default.createElement(_reactNative.View, {
       style: styles.containerStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 5
+        lineNumber: 6
       }
-    }, props.children);
+    }, dependency.children);
   };
 
   var styles = {
@@ -87382,7 +87391,45 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
   };
   var _default = Card;
   exports.default = _default;
-},573,[1,2,9],"src/Components/Card.js");
+},573,[1,2,9,574],"src/Components/Card.js");
+__d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, exports, _dependencyMap) {
+  var _interopRequireDefault = _$$_REQUIRE(_dependencyMap[0], "@babel/runtime/helpers/interopRequireDefault");
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.default = void 0;
+
+  var _react = _interopRequireDefault(_$$_REQUIRE(_dependencyMap[1], "react"));
+
+  var _reactNative = _$$_REQUIRE(_dependencyMap[2], "react-native");
+
+  var _jsxFileName = "/Users/Saikumar/Developer/github:Saikumar-k99/sampleReactNative/DoorDashReactDemo/src/Components/CardSection.js";
+
+  var CardSection = function CardSection(props) {
+    return _react.default.createElement(_reactNative.View, {
+      style: styles.containerStyle,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      }
+    }, props.children);
+  };
+
+  var styles = {
+    containerStyle: {
+      borderBottomWidth: 1,
+      padding: 5,
+      backgroundColor: '#fff',
+      justifyContent: 'flex-start',
+      flexDirection: 'row',
+      borderColor: '#ddd',
+      position: 'relative'
+    }
+  };
+  var _default = CardSection;
+  exports.default = _default;
+},574,[1,2,9],"src/Components/CardSection.js");
 __r(90);
 __r(0);
 //# sourceMappingURL=index.map
