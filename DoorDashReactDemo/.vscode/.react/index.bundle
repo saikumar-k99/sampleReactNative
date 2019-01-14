@@ -86275,7 +86275,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
             propAlbum: album,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 16
+              lineNumber: 18
             }
           });
         });
@@ -86287,7 +86287,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         return _react.default.createElement(_reactNative.View, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 24
           }
         }, this.renderAlbums());
       }
@@ -87322,49 +87322,52 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var _jsxFileName = "/Users/Saikumar/Developer/github:Saikumar-k99/sampleReactNative/DoorDashReactDemo/src/Components/AlbumDetail.js";
 
-  var AlbumDetail = function AlbumDetail(album) {
-    var title = album.title,
-        artist = album.artist,
-        thumbnail_image = album.thumbnail_image;
+  var AlbumDetail = function AlbumDetail(_ref) {
+    var propAlbum = _ref.propAlbum;
+    var title = propAlbum.title,
+        artist = propAlbum.artist,
+        thumbnail_image = propAlbum.thumbnail_image;
+    var thumbnailStyle = styles.thumbnailStyle,
+        headerContentStyles = styles.headerContentStyles;
     return _react.default.createElement(_Card.default, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 10
-      }
-    }, _react.default.createElement(_CardSection.default, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 11
       }
+    }, _react.default.createElement(_CardSection.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      }
     }, _react.default.createElement(_reactNative.View, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 14
+        lineNumber: 15
       }
     }, _react.default.createElement(_reactNative.Image, {
       source: {
         uri: thumbnail_image
       },
-      style: styles.thumbnailStyle,
+      style: thumbnailStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 16
       }
     })), _react.default.createElement(_reactNative.View, {
-      style: styles.headerContentStyles,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      }
-    }, _react.default.createElement(_reactNative.Text, {
+      style: headerContentStyles,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 21
       }
-    }, title), _react.default.createElement(_reactNative.Text, {
+    }, _react.default.createElement(_reactNative.Text, {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 22
+      }
+    }, title), _react.default.createElement(_reactNative.Text, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
       }
     }, artist))));
   };
