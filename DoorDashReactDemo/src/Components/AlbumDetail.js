@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import CardButton from './CardButton';
 
 const AlbumDetail = ({ propAlbum }) => {
     const { title, artist, thumbnail_image } = propAlbum;
@@ -27,7 +28,12 @@ const AlbumDetail = ({ propAlbum }) => {
                 <Text>{artist}</Text>
             </View>
         </CardSection>
-    </Card>
+
+        {/* Another card section for button */}
+        <CardSection>
+            <CardButton />
+        </CardSection>
+    </Card>    
     );
 };
 
