@@ -8,7 +8,7 @@ import AlbumsList from './src/Components/AlbumList';
 
 // Create a component
 // returns the JSX in the below funciton
-const App = () => (<View>
+const App = () => (<View style={{ flex: 1 }}>
     <Header headerText={'Restaurants'} />
     <AlbumsList />
 </View>);

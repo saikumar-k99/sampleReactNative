@@ -8,7 +8,7 @@ import { Text, View } from 'react-native';
 const Header = (props) => {
     const { textStyle, viewStyle } = styles;
 
-    // Below is the JSX code that will returnt the layout for rendering purpose
+    // Below is the JSX code that will return the layout for rendering purpose
     return (<View style={viewStyle}> 
      <Text style={textStyle}>{props.headerText}</Text>
      </View>);

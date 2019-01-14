@@ -1374,6 +1374,9 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
 
   var App = function App() {
     return _react.default.createElement(_reactNative.View, {
+      style: {
+        flex: 1
+      },
       __source: {
         fileName: _jsxFileName,
         lineNumber: 11
@@ -86284,7 +86287,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       key: "render",
       value: function render() {
         console.log(this.state);
-        return _react.default.createElement(_reactNative.View, {
+        return _react.default.createElement(_reactNative.ScrollView, {
           __source: {
             fileName: _jsxFileName,
             lineNumber: 24
@@ -87328,21 +87331,24 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
         artist = propAlbum.artist,
         thumbnail_image = propAlbum.thumbnail_image;
     var thumbnailStyle = styles.thumbnailStyle,
-        headerContentStyles = styles.headerContentStyles;
+        headerContentStyles = styles.headerContentStyles,
+        thumbnailContainerStyle = styles.thumbnailContainerStyle,
+        headerTextStyle = styles.headerTextStyle;
     return _react.default.createElement(_Card.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 11
+        lineNumber: 14
       }
     }, _react.default.createElement(_CardSection.default, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 15
       }
     }, _react.default.createElement(_reactNative.View, {
+      style: thumbnailContainerStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 18
       }
     }, _react.default.createElement(_reactNative.Image, {
       source: {
@@ -87351,25 +87357,40 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       style: thumbnailStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 16
+        lineNumber: 19
       }
     })), _react.default.createElement(_reactNative.View, {
       style: headerContentStyles,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 25
       }
     }, _react.default.createElement(_reactNative.Text, {
+      style: headerTextStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 22
+        lineNumber: 26
       }
     }, title), _react.default.createElement(_reactNative.Text, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 27
       }
-    }, artist))));
+    }, artist))), _react.default.createElement(_CardSection.default, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      }
+    }, _react.default.createElement(_reactNative.Image, {
+      style: styles.imageStyle,
+      source: {
+        uri: thumbnail_image
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      }
+    })));
   };
 
   var styles = {
@@ -87380,6 +87401,20 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
     thumbnailStyle: {
       height: 50,
       width: 50
+    },
+    thumbnailContainerStyle: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginLeft: 10,
+      marginRight: 10
+    },
+    headerTextStyle: {
+      fontSize: 18
+    },
+    imageStyle: {
+      height: 300,
+      flex: 1,
+      width: null
     }
   };
   var _default = AlbumDetail;
@@ -87450,7 +87485,7 @@ __d(function (global, _$$_REQUIRE, _$$_IMPORT_DEFAULT, _$$_IMPORT_ALL, module, e
       style: styles.containerStyle,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 6
+        lineNumber: 5
       }
     }, props.children);
   };

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import axios from 'axios';
 import AlbumDetail from './AlbumDetail';
 
@@ -21,9 +21,9 @@ class AlbumsList extends Component {
     // Automatically called when implemented while any UI is rendered on to the screen
     render() {
         console.log(this.state);
-        return (<View>
+        return (<ScrollView>
             {this.renderAlbums()}
-            </View>);
+            </ScrollView>);
     }
 }
 
