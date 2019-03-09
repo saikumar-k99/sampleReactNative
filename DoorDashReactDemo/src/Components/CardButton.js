@@ -1,11 +1,12 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-const CardButton = () => { 
+// Use this initializer type parameter as a function type by using {}
+const CardButton = ({ handlerMethod }) => { 
     const { buttonStyle, buttonTextStyle } = styles;
 
     return (
-    <TouchableOpacity style={buttonStyle}>
+    <TouchableOpacity onPress={handlerMethod} style={buttonStyle}>
         <Text style={buttonTextStyle}>Click Here to Buy!! </Text>
     </TouchableOpacity>
     );
@@ -20,7 +21,7 @@ const CardButton = () => {
             paddingTop: 10,
             paddingBottom: 10
         },
-        
+
         buttonStyle: {
             flex: 1,
             alignSelf: 'stretch',

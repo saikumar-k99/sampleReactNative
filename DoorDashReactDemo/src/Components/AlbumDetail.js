@@ -31,7 +31,7 @@ const AlbumDetail = ({ propAlbum }) => {
 
         {/* Another card section for button */}
         <CardSection>
-            <CardButton />
+            <CardButton handlerMethod={() => console.log(title)} />
         </CardSection>
     </Card>    
     );
